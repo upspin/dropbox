@@ -1,9 +1,8 @@
-# Upspin `TODO` repository
+# Upspin `dropbox` repository
 
-TODO: Short description of what this repository is about.
+Note: This repository is under construction.
+
+This repository contains support for running Upspin on
+[Dropbox](https://dropbox.com).
 
 See the [master repository](https://github.com/upspin/upspin#readme) for more information.
-
-## TODO
-
-TODO: Any details about this repository.
