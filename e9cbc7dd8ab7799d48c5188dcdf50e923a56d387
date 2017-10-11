@@ -16,6 +16,24 @@
       "revId": "e9cbc7dd8ab7799d48c5188dcdf50e923a56d387",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2945241_0603b1de",
+        "filename": "cmd/upspin-setupstorage-dropbox/setupstorage.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T12:16:17Z",
+      "side": 1,
+      "message": "Yes, this doesn\u0027t make sense, since the oauth flow does not use a redirection.",
+      "parentUuid": "c28f6db2_ba6963f0",
+      "revId": "e9cbc7dd8ab7799d48c5188dcdf50e923a56d387",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
     }
   ]
 }
