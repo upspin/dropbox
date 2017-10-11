@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2c5df846_fd1cca82",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fb3f7d0b_9d1ff98e",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0345fde5_46a409ab",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "682cd683_3ea015c0",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "Ack. It\u0027s not an acronym like GCS or S3. I will propagate the changes also to the rest of the implementation (dropbox_test.go and the upspin-setupstorage-dropbox command).",
+      "parentUuid": "0345fde5_46a409ab",
+      "range": {
+        "startLine": 41,
+        "startChar": 19,
+        "endLine": 41,
+        "endChar": 26
+      },
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c609f86b_6c10c244",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -53,6 +95,24 @@
       "writtenOn": "2017-10-10T23:10:48Z",
       "side": 1,
       "message": "This is unsafe, if you don\u0027t trust the caller (and maybe even if you do).\n\npPlease at least use %q here to quote the ref, but better still would be to actually encode the JSON:\n\narg, _ :\u003d json.Marshal(struct{\n Path string `json:\"path\"`\n}{ref})\n\nthen below:\n\nreq.Header.Add(\"Dropbox-API-Arg\", string(arg))",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d4f1c9ef_f9fe6db8",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "Ack, but is it save to omit checking for an error here when doing a json.Marshal?",
+      "parentUuid": "c609f86b_6c10c244",
       "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
@@ -76,6 +136,24 @@
     },
     {
       "key": {
+        "uuid": "7eca2516_8b7223bc",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "\u003e func (d *dropboxImpl) newRequest(path string, arg interface{}) (*http.Request, error)\n\nI\u0027m struggling a little bit to understand the implementation of such method. For the different requests (put, download and delete) we have slightly different request bodies and headers. How can we distinguish between args which go into the header and the once which go into the body? Or did you mean using a variadic function? ...(path string, args ...interface{}) (*...\n\n\u003e func (d *dropboxImpl) doRequest(req *http.Request) ([]byte, error)\nAck",
+      "parentUuid": "86d0b422_3c334500",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "491d3b94_8dd136ab",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -90,6 +168,24 @@
       "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebadd54e_d06b8741",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "491d3b94_8dd136ab",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
     },
     {
       "key": {
@@ -116,6 +212,30 @@
     },
     {
       "key": {
+        "uuid": "037a6a75_f3d30446",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "704b4e9c_e8474042",
+      "range": {
+        "startLine": 79,
+        "startChar": 4,
+        "endLine": 79,
+        "endChar": 35
+      },
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9e8d027_8571dbc2",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -139,6 +259,30 @@
     },
     {
       "key": {
+        "uuid": "00fe618c_e828ef38",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a9e8d027_8571dbc2",
+      "range": {
+        "startLine": 94,
+        "startChar": 26,
+        "endLine": 94,
+        "endChar": 48
+      },
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f6d3f05_82935484",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -153,6 +297,24 @@
       "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ae23e19c_e54b0608",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-11T15:32:11Z",
+      "side": 1,
+      "message": "Ack. This will then be done by the doRequest helper method.",
+      "parentUuid": "9f6d3f05_82935484",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
     }
   ]
 }
