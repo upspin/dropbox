@@ -119,6 +119,24 @@
     },
     {
       "key": {
+        "uuid": "8bec0382_1861e7e7",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 5389
+      },
+      "writtenOn": "2017-10-12T06:32:31Z",
+      "side": 1,
+      "message": "I think so.",
+      "parentUuid": "d4f1c9ef_f9fe6db8",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "86d0b422_3c334500",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -148,6 +166,24 @@
       "side": 1,
       "message": "\u003e func (d *dropboxImpl) newRequest(path string, arg interface{}) (*http.Request, error)\n\nI\u0027m struggling a little bit to understand the implementation of such method. For the different requests (put, download and delete) we have slightly different request bodies and headers. How can we distinguish between args which go into the header and the once which go into the body? Or did you mean using a variadic function? ...(path string, args ...interface{}) (*...\n\n\u003e func (d *dropboxImpl) doRequest(req *http.Request) ([]byte, error)\nAck",
       "parentUuid": "86d0b422_3c334500",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f7a52d68_d8dcc804",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 5389
+      },
+      "writtenOn": "2017-10-12T06:32:31Z",
+      "side": 1,
+      "message": "The proposed function returns a *http.Request... I forgot to include the body argument in my suggested function signature\n\nfunc (d *dropboxImpl) newRequest(path string, body io.Reader, arg interface{}) (*http.Request, error)\n\nThat method would create the request, set the Authorization and Dropbox-API-Arg headers, and return the request.\n\nThe caller could then add more headers if required.\n\nDoes that make sense?",
+      "parentUuid": "7eca2516_8b7223bc",
       "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
