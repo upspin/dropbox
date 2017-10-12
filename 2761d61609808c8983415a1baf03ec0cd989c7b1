@@ -208,6 +208,24 @@
     },
     {
       "key": {
+        "uuid": "9f7ff8d3_3d8a336f",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-12T10:32:33Z",
+      "side": 1,
+      "message": "I meant: why not using type string for arg instead of type interface{}.",
+      "parentUuid": "44dd304f_1c05efe9",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "491d3b94_8dd136ab",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
