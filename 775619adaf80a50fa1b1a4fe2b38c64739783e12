@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fd59f843_7f4b0007",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "38ac471b_66755bf7",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "57d60924_ce6083b8",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 2
@@ -33,6 +51,24 @@
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7aeb99b0_cbeed309",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "57d60924_ce6083b8",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "9e9d1725_a619b620",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "It puts the object file in the Upspin app folder of an user under /app/upspin.",
+      "parentUuid": "eb65c95d_831d351f",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "02ea3209_67c84484",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2017-10-13T08:12:55Z",
       "side": 1,
       "message": "it\u0027s not files that get stored, at least from Upspin\u0027s point of view, it\u0027s blocks.\nthis should be fine. the comment could clarify that.",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4d82ce25_15d966c6",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "my fault. It would only be a problem if someone changes the upspin.Blocksize to something bigger than 150 MB right?",
+      "parentUuid": "02ea3209_67c84484",
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "a588a17b_87b7ee41",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "In TestMain we have no instance of \u0027t\u0027 I think therefore log.Printf is used.",
+      "parentUuid": "2e0ffb25_648d6835",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "efdf0497_d52cce3b",
         "filename": "cloud/storage/dropbox/dropbox_test.go",
         "patchSetId": 2
@@ -98,6 +188,24 @@
       "writtenOn": "2017-10-13T08:12:55Z",
       "side": 1,
       "message": "obtained, visiting.\n\nbut you don\u0027t need to to use words like \"ensure\". or \"obtained\"; \"get\" works. also, isn\u0027t it a \"token\"\n\nTo enable this test, first get an authentication token by visiting:",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b901328_ee9f068c",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "Ack, but we get a code not a token by visiting the url.\n\nThis a bit clumsy since for every run of the test we need a new code. We should temporarily store the token somewhere like ~/upspin/testing/token? or in the same directory of the test itself?",
+      "parentUuid": "efdf0497_d52cce3b",
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "c6dcb894_b93009e4",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "It\u0027s the client key of the application registered for accessing the Dropbox API. \n\nFor testing I registered an \"Upspin-test\" Dropbox app so the test does not touch anything in the main app folder (/app/upspin) of an user.",
+      "parentUuid": "368c7570_72c56190",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8a96789b_ca06d200",
         "filename": "cloud/storage/dropbox/dropbox_test.go",
         "patchSetId": 2
@@ -132,6 +258,24 @@
       "writtenOn": "2017-10-13T08:12:55Z",
       "side": 1,
       "message": "don\u0027t exit! the test reporting won\u0027t work. just return.\n\ncode :\u003d m.Run()\nif code !\u003d 0 {\n  t.Fatalf(\"test exited with code %v\", code)\n}",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4247141_b5d4ed82",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "Is this upspin specific? The documentation for TestMain states that os.Exit(m.Run()) should be called.",
+      "parentUuid": "8a96789b_ca06d200",
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
@@ -152,6 +296,24 @@
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ab81827_dc9587c3",
+        "filename": "cmd/upspinserver-dropbox/main.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T19:55:15Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "b62480c8_40a0a24b",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
     }
   ]
 }
