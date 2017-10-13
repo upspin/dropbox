@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "715f55cb_c9bfed93",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2c5df846_fd1cca82",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0345fde5_46a409ab",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -72,6 +90,30 @@
       "side": 1,
       "message": "Ack. It\u0027s not an acronym like GCS or S3. I will propagate the changes also to the rest of the implementation (dropbox_test.go and the upspin-setupstorage-dropbox command).",
       "parentUuid": "0345fde5_46a409ab",
+      "range": {
+        "startLine": 41,
+        "startChar": 19,
+        "endLine": 41,
+        "endChar": 26
+      },
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "898a8037_2f6a96cd",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "682cd683_3ea015c0",
       "range": {
         "startLine": 41,
         "startChar": 19,
@@ -134,6 +176,24 @@
       "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dbdbccef_2979fe0e",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8bec0382_1861e7e7",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
     },
     {
       "key": {
@@ -244,6 +304,24 @@
     },
     {
       "key": {
+        "uuid": "9af4f26b_77695b9e",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "346babd8_1616fc43",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "491d3b94_8dd136ab",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -273,6 +351,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "491d3b94_8dd136ab",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f847f18_83a3fec4",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ebadd54e_d06b8741",
       "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": false
@@ -314,6 +410,30 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "704b4e9c_e8474042",
+      "range": {
+        "startLine": 79,
+        "startChar": 4,
+        "endLine": 79,
+        "endChar": 35
+      },
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97773090_841bc9b0",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "037a6a75_f3d30446",
       "range": {
         "startLine": 79,
         "startChar": 4,
@@ -373,6 +493,30 @@
     },
     {
       "key": {
+        "uuid": "46903762_76709eb1",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "00fe618c_e828ef38",
+      "range": {
+        "startLine": 94,
+        "startChar": 26,
+        "endLine": 94,
+        "endChar": 48
+      },
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f6d3f05_82935484",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 1
@@ -402,6 +546,24 @@
       "side": 1,
       "message": "Ack. This will then be done by the doRequest helper method.",
       "parentUuid": "9f6d3f05_82935484",
+      "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b46ddc3_e1bfc317",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-13T07:56:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae23e19c_e54b0608",
       "revId": "2761d61609808c8983415a1baf03ec0cd989c7b1",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": false
