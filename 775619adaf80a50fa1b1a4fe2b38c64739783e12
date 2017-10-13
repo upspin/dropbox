@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "38ac471b_66755bf7",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "it\u0027s good to use the standard go sentence-style comments even for unexported identifiers.\nit could also be clearer, something like\n\n// apiToken is the key for the dial options in the storage.Storage interface.",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57d60924_ce6083b8",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "s/connects/\u0026 to/",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eb65c95d_831d351f",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "does this put the object at the top of the Dropbox tree?",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "02ea3209_67c84484",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "it\u0027s not files that get stored, at least from Upspin\u0027s point of view, it\u0027s blocks.\nthis should be fine. the comment could clarify that.",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e0ffb25_648d6835",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "don\u0027t do log and exit, use t.Skip or t.Skipf.",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "efdf0497_d52cce3b",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "obtained, visiting.\n\nbut you don\u0027t need to to use words like \"ensure\". or \"obtained\"; \"get\" works. also, isn\u0027t it a \"token\"\n\nTo enable this test, first get an authentication token by visiting:",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "368c7570_72c56190",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "what\u0027s that client id?",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8a96789b_ca06d200",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "don\u0027t exit! the test reporting won\u0027t work. just return.\n\ncode :\u003d m.Run()\nif code !\u003d 0 {\n  t.Fatalf(\"test exited with code %v\", code)\n}",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b62480c8_40a0a24b",
+        "filename": "cmd/upspinserver-dropbox/main.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 5305
+      },
+      "writtenOn": "2017-10-13T08:12:55Z",
+      "side": 1,
+      "message": "Please reflow the comment for nicer layout.",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    }
+  ]
+}
