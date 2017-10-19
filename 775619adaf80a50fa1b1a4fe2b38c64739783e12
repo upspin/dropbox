@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "9aa31220_e17d754c",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd59f843_7f4b0007",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "57d60924_ce6083b8",
         "filename": "cloud/storage/dropbox/dropbox.go",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "57d60924_ce6083b8",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "86374f7c_a726cf2a",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7aeb99b0_cbeed309",
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": false
@@ -160,6 +196,24 @@
     },
     {
       "key": {
+        "uuid": "1d68f01b_6c6ca8ca",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31e2db0a_05045bd2",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e0ffb25_648d6835",
         "filename": "cloud/storage/dropbox/dropbox_test.go",
         "patchSetId": 2
@@ -207,6 +261,24 @@
       "side": 1,
       "message": "Sounds good.",
       "parentUuid": "a588a17b_87b7ee41",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "94cac5cf_54af5159",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a61dd83c_eb1fee17",
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": false
@@ -266,6 +338,24 @@
     },
     {
       "key": {
+        "uuid": "cca822fe_7fccf18f",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "I think ioutil.TempFile isn\u0027t a good fit. How can I find out the name of the temp file in sequently calls of the test?\n\nWhat about saving the file into the os.TempDir?\n\n  tokenTempFile :\u003d path.Join(os.TempDir(), \"upspin-test-token\")\n  token, err :\u003d readToken(tokenTempFile)\n  ...\n\nEvery time the test is run, we first check if token is set otherwise we ask for one and save it. What do you think?",
+      "parentUuid": "e91d49ab_50906393",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "368c7570_72c56190",
         "filename": "cloud/storage/dropbox/dropbox_test.go",
         "patchSetId": 2
@@ -295,6 +385,24 @@
       "side": 1,
       "message": "It\u0027s the client key of the application registered for accessing the Dropbox API. \n\nFor testing I registered an \"Upspin-test\" Dropbox app so the test does not touch anything in the main app folder (/app/upspin) of an user.",
       "parentUuid": "368c7570_72c56190",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6455f72d_8584f749",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c6dcb894_b93009e4",
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": false
@@ -354,6 +462,24 @@
     },
     {
       "key": {
+        "uuid": "a4e3ce36_406d63f5",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e12adc19_0e5eef9d",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b62480c8_40a0a24b",
         "filename": "cmd/upspinserver-dropbox/main.go",
         "patchSetId": 2
@@ -383,6 +509,24 @@
       "side": 1,
       "message": "Ack",
       "parentUuid": "b62480c8_40a0a24b",
+      "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2659754_e8fa8843",
+        "filename": "cmd/upspinserver-dropbox/main.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-19T07:02:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ab81827_dc9587c3",
       "revId": "775619adaf80a50fa1b1a4fe2b38c64739783e12",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": false
