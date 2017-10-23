@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0619622_aeb57577",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 5389
+      },
+      "writtenOn": "2017-10-23T05:41:09Z",
+      "side": 1,
+      "message": "you can just write t.Fatal(err) because the Put will be in the error message.\nsame for Download",
+      "revId": "5b45735bfa14edee5ae65ae08b9ff00284f65267",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a3478b40_b4858b56",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 5389
+      },
+      "writtenOn": "2017-10-23T05:41:09Z",
+      "side": 1,
+      "message": "I\u0027m confused why this is written to a file at all. What reads the file?\nSorry for being a bit confused here; I\u0027m sure if I were reviewing your change more quickly then I would keep all this in my head, but things have been hectic lately.",
+      "revId": "5b45735bfa14edee5ae65ae08b9ff00284f65267",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    }
+  ]
+}
