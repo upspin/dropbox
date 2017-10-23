@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "810111e8_232b76aa",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-23T07:45:49Z",
+      "side": 1,
+      "message": "ACK. The code above is the same as in the GCP and AWS tests. I think we should also adapt these tests since they are often used as examples for new storage backends.",
+      "parentUuid": "e0619622_aeb57577",
+      "revId": "5b45735bfa14edee5ae65ae08b9ff00284f65267",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a3478b40_b4858b56",
         "filename": "cloud/storage/dropbox/dropbox_test.go",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2017-10-23T05:41:09Z",
       "side": 1,
       "message": "I\u0027m confused why this is written to a file at all. What reads the file?\nSorry for being a bit confused here; I\u0027m sure if I were reviewing your change more quickly then I would keep all this in my head, but things have been hectic lately.",
+      "revId": "5b45735bfa14edee5ae65ae08b9ff00284f65267",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d5917260_ccafae4e",
+        "filename": "cloud/storage/dropbox/dropbox_test.go",
+        "patchSetId": 4
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 6188
+      },
+      "writtenOn": "2017-10-23T07:45:49Z",
+      "side": 1,
+      "message": "The file will be read on line 109 and if the content is not nil the function will return it.\n\nWhy this all?\nEvery time we run the test we need to get an authentication code by visiting the following url:\nhttps://www.dropbox.com/oauth2/authorize?client_id\u003dufhy41x7g4obzqz\u0026response_type\u003dcode\nThe code displayed on the website must be copied and passed with the \u0027-code\u0027 flag to the test to request an oAuth2 token.\n\nIn my opinion this is a bit clumsy, therefore on the first time the test is run, the \u0027-code\u0027 flag must be passed and the requested oAuth2 token is stored in a file \"tokenFile :\u003d path.Join(os.TempDir(), \"upspin-test-token\")\". \n\nThe next times the test is run the function first tries to read the tokenFile (line 109) and if it\u0027s content in not nil we return it.",
+      "parentUuid": "a3478b40_b4858b56",
       "revId": "5b45735bfa14edee5ae65ae08b9ff00284f65267",
       "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
       "unresolved": true
