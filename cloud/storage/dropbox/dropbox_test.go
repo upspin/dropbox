@@ -106,7 +106,7 @@ it and reuse it in successive test calls.
 func token() (string, error) {
 	tokenFile := path.Join(os.TempDir(), "upspin-test-token")
 
-	token, _ := ioutil.ReadFile(tokenFile)
+	token, err := ioutil.ReadFile(tokenFile)
 	if err == nil {
 		return string(token), nil
 	}
