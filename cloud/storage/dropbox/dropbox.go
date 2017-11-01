@@ -12,6 +12,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"strings"
 
 	"upspin.io/cloud/storage"
 	"upspin.io/errors"
@@ -69,9 +70,12 @@ func (d *dropboxImpl) Download(ref string) ([]byte, error) {
 
 	data, err := d.doRequest(req)
 	if err != nil {
+		if derr, ok := err.(DropboxAPIError); ok && derr.StatusCode() == 404 {
+			return nil, errors.E(op, errors.NotExist, derr)
+		}
+
 		return nil, errors.E(op, errors.IO, err)
 	}
-
 	return data, nil
 }
 
@@ -161,14 +165,40 @@ func (d *dropboxImpl) doRequest(req *http.Request) ([]byte, error) {
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 200 {
-		return nil, errors.Errorf(resp.Status)
-	}
-
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}
 
+	if resp.StatusCode == http.StatusConflict {
+		var dbxErr DropboxAPIError
+		err := json.Unmarshal(body, &dbxErr)
+		if err != nil {
+			return nil, err
+		}
+
+		return nil, dbxErr
+	}
+
+	if resp.StatusCode != 200 {
+		return nil, errors.Errorf(resp.Status)
+	}
+
 	return body, nil
+}
+
+type DropboxAPIError struct {
+	ErrorSummary string `json:"error_summary"`
+}
+
+func (e DropboxAPIError) StatusCode() int {
+	if strings.Contains(e.ErrorSummary, "not_found") {
+		return 404
+	}
+
+	return 0
+}
+
+func (e DropboxAPIError) Error() string {
+	return e.ErrorSummary
 }
