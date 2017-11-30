@@ -24,7 +24,7 @@ const apiToken = "token"
 
 // New initializes a Storage implementation that stores data to Dropbox.
 func New(opts *storage.Opts) (storage.Storage, error) {
-	const op = "cloud/storage/dropbox.New"
+	const op errors.Op = "cloud/storage/dropbox.New"
 
 	tok, ok := opts.Opts[apiToken]
 	if !ok {
@@ -57,7 +57,7 @@ func (d *dropboxImpl) LinkBase() (base string, err error) {
 
 // Download implements Storage.
 func (d *dropboxImpl) Download(ref string) ([]byte, error) {
-	const op = "cloud/storage/dropbox.Download"
+	const op errors.Op = "cloud/storage/dropbox.Download"
 
 	arg, _ := json.Marshal(struct {
 		Path string `json:"path"`
@@ -81,7 +81,7 @@ func (d *dropboxImpl) Download(ref string) ([]byte, error) {
 
 // Put implements Storage.
 func (d *dropboxImpl) Put(ref string, contents []byte) error {
-	const op = "cloud/storage/dropbox.Put"
+	const op errors.Op = "cloud/storage/dropbox.Put"
 
 	arg, _ := json.Marshal(struct {
 		Path   string `json:"path"`
@@ -115,7 +115,7 @@ func (d *dropboxImpl) Put(ref string, contents []byte) error {
 
 // Delete implements Storage.
 func (d *dropboxImpl) Delete(ref string) error {
-	const op = "cloud/storage/dropbox.Delete"
+	const op errors.Op = "cloud/storage/dropbox.Delete"
 
 	arg, _ := json.Marshal(struct {
 		Path string `json:"path"`
