@@ -47,8 +47,13 @@ type dropboxImpl struct {
 	token  string
 }
 
-// Guarantee we implement the Storage interface
-var _ storage.Storage = (*dropboxImpl)(nil)
+var (
+	// Guarantee we implement the Storage interface
+	_ storage.Storage = (*dropboxImpl)(nil)
+
+	// Guarantee we implement the storage.Lister interface.
+	_ storage.Lister = (*dropboxImpl)(nil)
+)
 
 // LinkBase implements Storage.
 func (d *dropboxImpl) LinkBase() (base string, err error) {
@@ -137,6 +142,69 @@ func (d *dropboxImpl) Delete(ref string) error {
 	return nil
 }
 
+// maxResults specifies the number of references to return from each call to
+// List. It is a variable here so that it may be overridden in tests.
+var maxResults int32 = 1000
+
+// List implements storage.Lister.
+func (d *dropboxImpl) List(token string) (refs []upspin.ListRefsItem, nextToken string, err error) {
+	const op errors.Op = "cloud/storage/dropbox.List"
+
+	u := "https://api.dropboxapi.com/2/files/list_folder"
+	arg, _ := json.Marshal(struct {
+		Path  string `json:"path"`
+		Limit int32  `json:"limit"`
+	}{
+		"",
+		maxResults,
+	})
+
+	if token != "" {
+		u = "https://api.dropboxapi.com/2/files/list_folder/continue"
+		arg, _ = json.Marshal(struct {
+			Cursor string `json:"cursor"`
+		}{token})
+	}
+
+	req, err := d.newRequest(u, bytes.NewReader(arg), "")
+	if err != nil {
+		return nil, "", errors.E(op, err)
+	}
+	req.Header.Set("Content-Type", "application/json")
+
+	body, err := d.doRequest(req)
+	if err != nil {
+		return nil, "", errors.E(op, err)
+	}
+
+	var objs struct {
+		Items []struct {
+			Name string
+			Size int64
+		} `json:"entries"`
+		NextPageToken string `json:"cursor"`
+		More          bool   `json:"has_more"`
+	}
+
+	err = json.Unmarshal(body, &objs)
+	if err != nil {
+		return nil, "", errors.E(op, err)
+	}
+
+	for _, item := range objs.Items {
+		refs = append(refs, upspin.ListRefsItem{
+			Ref:  upspin.Reference(item.Name),
+			Size: item.Size,
+		})
+	}
+
+	if objs.More {
+		nextToken = objs.NextPageToken
+	}
+
+	return refs, nextToken, nil
+}
+
 // Close implements Storage.
 func (d *dropboxImpl) Close() {
 	// not yet implemented
@@ -181,7 +249,7 @@ func (d *dropboxImpl) doRequest(req *http.Request) ([]byte, error) {
 	}
 
 	if resp.StatusCode != 200 {
-		return nil, errors.Errorf(resp.Status)
+		return nil, errors.Errorf("Dropbox API: %s, %s", resp.Status, body)
 	}
 
 	return body, nil
