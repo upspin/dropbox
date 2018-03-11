@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3e6d82e0_3fc761b5",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 5389
+      },
+      "writtenOn": "2018-03-11T22:01:16Z",
+      "side": 1,
+      "message": "errors.E(op, err)\n\nhere and elswewhere",
+      "range": {
+        "startLine": 171,
+        "startChar": 18,
+        "endLine": 171,
+        "endChar": 21
+      },
+      "revId": "7457b591da5fce87094a2e3d6a7255b945e502f0",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d4160e4f_918ca31a",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 5389
+      },
+      "writtenOn": "2018-03-11T22:01:16Z",
+      "side": 1,
+      "message": "You don\u0027t need the json struct tags for these two fields; the json package will match the \"name\" key to the Name field, ditto size/Size",
+      "revId": "7457b591da5fce87094a2e3d6a7255b945e502f0",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "48b207c1_8fc442e6",
+        "filename": "cloud/storage/dropbox/dropbox.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 5389
+      },
+      "writtenOn": "2018-03-11T22:01:16Z",
+      "side": 1,
+      "message": "I\u0027d go with %s: %s",
+      "range": {
+        "startLine": 252,
+        "startChar": 42,
+        "endLine": 252,
+        "endChar": 48
+      },
+      "revId": "7457b591da5fce87094a2e3d6a7255b945e502f0",
+      "serverId": "0759ed4b-3fdc-34dc-866b-f2e708168c03",
+      "unresolved": true
+    }
+  ]
+}
