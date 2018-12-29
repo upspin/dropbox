@@ -89,7 +89,7 @@ func (s *state) token(code string) string {
 
 	token, err := conf.Exchange(oauth2.NoContext, code)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "error in fetching oauth2 token: %v.\n", err)
+		s.Exit(err)
 	}
 
 	return token.AccessToken
